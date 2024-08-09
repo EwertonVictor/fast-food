@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,21 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="Src/css/style.css">
 </head>
+
 <body>
     <nav class="navbar">
         <!-- navegação -->
         <div class="nav">
             <div class="lista">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a class="link active" href="#">Início</a></li>
+                    <li><a class="link" href="#">Sobre</a></li>
+                    <li><a class="link" href="#">Contato</a></li>
                 </ul>
             </div>
             <div class="pedido__usuario">
                 <div class="login__user">
-                    <a href="login.html"><i class='bx bx-user' ></i></a>
+                    <a href="login.html"><i class='bx bx-user'></i></a>
                 </div>
                 <div class="cart">
                     <i class='bx bx-cart-alt'></i>
@@ -32,18 +34,233 @@
         <!-- chamada das promo -->
         <div class="promo">
             <div class="chamada">
-                <h3 class="chamada__promo">PROMOÇÃO DA SEMANA!</h3>
-                <h2 class="chamada__titulo">HAMBÚRGUER CLÁSSICO</h2>
-                <P class="chamada__texto">Reviva o sabor autêntico com o nosso Hambúrguer Clássico da Casa! Feito com a receita tradicional que conquistou nossos clientes ao longo dos anos, este hambúrguer oferece uma combinação perfeita de simplicidade e sabor. Venha experimentar o clássico que é a alma do nosso menu.</P>
-                <a href="#" class="btn-confirm">
-                    <span>Confira</span>
-                </a>
+                <div class="chamada__info">
+                    <h3 class="chamada__promo">PROMOÇÃO DA SEMANA!</h3>
+                    <h2 class="chamada__titulo">HAMBÚRGUER CLÁSSICO</h2>
+                    <P class="chamada__texto">Reviva o sabor autêntico com o nosso Hambúrguer Clássico da Casa! Feito
+                        com a receita tradicional que conquistou nossos clientes ao longo dos anos, este hambúrguer
+                        oferece uma combinação perfeita de simplicidade e sabor. Venha experimentar o clássico que é a
+                        alma do nosso menu.</P>
+                    <a href="#" class="btn-confirm">
+                        <span>Confira</span>
+                    </a>
+                </div>
+                <img class="img__banner" src="Src/img/hamburguer-classic.png" alt="hamburguer clássico">
             </div>
         </div>
     </nav>
-    
+
+    <!-- corpo do site -->
     <main>
-        
+        <section class="catalogo">
+            <div class="catalogo__global">
+                <div class="cardapio">
+                    <div class="cardapio__container">
+                        <div class="cardapio__titulo">
+                            <h2>Cardápio</h2>
+                        </div>
+                        <div class="cardapio__filtro">
+                            <div class="box">
+                                <input type="search" id="searchInput" onmouseout="this.value='';this.blur();">
+                                <i class='bx bx-search'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__container">
+                    <!-- cheesburguer -->
+                    <div class="card">
+                        <div class="background__img">
+                            <img class="img__card" src="Src/img/card-Cheeseburger.png" alt="Cheeseburger">
+                        </div>
+                        <div class="legenda">
+                            <span class="legenda__titulo">Cheeseburger</span>
+                            <p class="legenda__descricao">Hambúrguer de carne bovina, queijo cheddar, alface, tomate,
+                                cebola e molho especial.</p>
+                            <p class="legenda__valor">R$: 9,90</p>
+                            <button class="btn-add">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <!-- Empada -->
+                    <div class="card">
+                        <div class="background__img">
+                            <img class="img__card" src="Src/img/card-Empada.png" alt="Empada">
+                        </div>
+                        <div class="legenda">
+                            <span class="legenda__titulo">Empada</span>
+                            <p class="legenda__descricao">Massa de farinha com recheio de frango.</p>
+                            <p class="legenda__valor">R$: 2,50</p>
+                            <button class="btn-add">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <!-- Suco de laranja -->
+                    <div class="card">
+                        <div class="background__img">
+                            <img class="img__card" src="Src/img/card-suco-laranja.png" alt="suco de laranja">
+                        </div>
+                        <div class="legenda">
+                            <span class="legenda__titulo">Suco de Laranja</span>
+                            <p class="legenda__descricao">Suco natural com laranjas frescas colhidas diretamente do pé
+                            </p>
+                            <p class="legenda__valor">R$: 5,00</p>
+                            <button class="btn-add">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <!-- pizza -->
+                    <div class="card">
+                        <div class="background__img">
+                            <img class="img__card" src="Src/img/card-pizza-pepperoni.png" alt="pizza">
+                        </div>
+                        <div class="legenda">
+                            <span class="legenda__titulo">Pizza de Pepperoni</span>
+                            <p class="legenda__descricao">Molho de tomate, mussarela, tomates e rodelas de pepperoni.
+                            </p>
+                            <p class="legenda__valor">R$: 35,00</p>
+                            <button class="btn-add">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <!-- batata -->
+                    <div class="card">
+                        <div class="background__img">
+                            <img class="img__card" src="Src/img/card-batata-clássica.png" alt="batata">
+                        </div>
+                        <div class="legenda">
+                            <span class="legenda__titulo">Batata Frita Clássica</span>
+                            <p class="legenda__descricao">Cortada em palitos finos e frita até ficar crocante.</p>
+                            <p class="legenda__valor">R$: 9,49</p>
+                            <button class="btn-add">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <!-- bacon -->
+                    <div class="card">
+                        <div class="background__img">
+                            <img class="img__card" src="Src/img/card-BaconBurger.png" alt="bacon">
+                        </div>
+                        <div class="legenda">
+                            <span class="legenda__titulo">Bacon Burguer</span>
+                            <p class="legenda__descricao">Hambúrguer de carne bovina, queijo, bacon crocante, alface,
+                                tomate e maionese.</p>
+                            <p class="legenda__valor">R$: 20,00</p>
+                            <button class="btn-add">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+
+                    <!-- hamburguer Clássico -->
+                    <div class="card">
+                        <div class="background__img">
+                            <img class="img__card" src="Src/img/hamburguer-classic.png" alt="hamburguer classico">
+                        </div>
+                        <div class="legenda">
+                            <span class="legenda__titulo">Hamburguer Clásico</span>
+                            <p class="legenda__descricao">Hambúrguer de carne bovina, cheddar, alface, cebola, picles.
+                            </p>
+                            <p class="legenda__valor">R$: 16,90</p>
+                            <button class="btn-add">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+
+                    <!-- card 8 -->
+                    <div class="card">
+                        <div class="background__img">
+                            <img class="img__card" src="" alt="">
+                        </div>
+                        <div class="legenda">
+                            <span class="legenda__titulo">Título</span>
+                            <p class="legenda__descricao">Um exemplo de texto rápido para construir o título do card e
+                                fazer preencher o conteúdo do card.</p>
+                            <p class="legenda__valor">R$: 00,00</p>
+                            <button class="btn-add">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+
+                    <!-- card 9 -->
+                    <div class="card">
+                        <div class="background__img">
+                            <img class="img__card" src="" alt="">
+                        </div>
+                        <div class="legenda">
+                            <span class="legenda__titulo">Título</span>
+                            <p class="legenda__descricao">Um exemplo de texto rápido para construir o título do card e
+                                fazer preencher o conteúdo do card.</p>
+                            <p class="legenda__valor">R$: 00,00</p>
+                            <button class="btn-add">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+
+                    <!-- card 10 -->
+                    <div class="card">
+                        <div class="background__img">
+                            <img class="img__card" src="" alt="">
+                        </div>
+                        <div class="legenda">
+                            <span class="legenda__titulo">Título</span>
+                            <p class="legenda__descricao">Um exemplo de texto rápido para construir o título do card e
+                                fazer preencher o conteúdo do card.</p>
+                            <p class="legenda__valor">R$: 00,00</p>
+                            <button class="btn-add">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+
+                    <!-- card 11 -->
+                    <div class="card">
+                        <div class="background__img">
+                            <img class="img__card" src="" alt="">
+                        </div>
+                        <div class="legenda">
+                            <span class="legenda__titulo">Título</span>
+                            <p class="legenda__descricao">Um exemplo de texto rápido para construir o título do card e
+                                fazer preencher o conteúdo do card.</p>
+                            <p class="legenda__valor">R$: 00,00</p>
+                            <button class="btn-add">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+
+                    <!-- card 12 -->
+                    <div class="card">
+                        <div class="background__img">
+                            <img class="img__card" src="" alt="">
+                        </div>
+                        <div class="legenda">
+                            <span class="legenda__titulo">Título</span>
+                            <p class="legenda__descricao">Um exemplo de texto rápido para construir o título do card e
+                                fazer preencher o conteúdo do card.</p>
+                            <p class="legenda__valor">R$: 00,00</p>
+                            <button class="btn-add">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contato">
+            <div class="contato__container">
+                <h2 class="contato__titulo">Contato</h2>
+                <div class="card__contato">
+                    <div class="card__info">
+                        <i class='bx bxs-phone'></i>
+                        <span class="titulo">Telefone</span>
+                        <p class="descricao">+55 81 90000-0000</p>
+                    </div>
+                    <div class="card__info">
+                        <i class='bx bx-envelope'></i>
+                        <span class="titulo">Email</span>
+                        <p class="descricao">fastfood@outlook.com.br</p>
+                    </div>
+                    <div class="card__info">
+                        <i class='bx bx-map'></i>
+                        <span class="titulo">Localização</span>
+                        <p class="descricao">R. Carmelita Muniz de Araújo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <!-- footer -->
+    <footer>
+        <div class="footer__container">
+            <hr class="copy linha">
+            <p class="copy">Copyright © 2024 - All Rights Reserved by Ewerton Victor</p>
+        </div>
+    </footer>
 </body>
+
 </html>
